@@ -3,7 +3,7 @@ package com.snyrise.eli.entity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collation = "Journals")
+@Document(collection = "Journals")
 public class JournalEntity {
 
   @Id

@@ -117,7 +117,7 @@ public class OrdersService {
     // what it was earlier deducted
 
     JournalEntity journal = journalsRepository.findByName(journalOrder.getJournalName());
-    if (OrderType.BUY.equals(journalOrder.getTradeType())) {
+    if (OrderType.BUY.equals(journalOrder.getOrderType())) {
       Double updatedBalance = journal.getBalance() - (Integer.parseInt(journalOrder.getQuantity())
           * Double.parseDouble(journalOrder.getBoughtPrice()));
       journalsRepository.delete(journal);

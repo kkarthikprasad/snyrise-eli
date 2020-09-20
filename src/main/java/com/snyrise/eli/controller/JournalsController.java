@@ -46,7 +46,7 @@ public class JournalsController {
     return new ResponseEntity<>(service.updateJournal(journalName, journal), HttpStatus.ACCEPTED);
   }
 
-  @DeleteMapping("/journals/{journalName")
+  @DeleteMapping("/journals/{journalName}")
   public ResponseEntity<HttpStatus> deleteJournal(
       @PathVariable(name = "journalName", required = true) String journalName) {
     service.deleteJournal(journalName);
