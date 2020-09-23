@@ -27,7 +27,9 @@ public class OrdersService {
   public OrderEntity placeOrder(String journalName, Order order) {
 
     // TODO validate Order object and its values
-
+    order.setTicker(order.getTicker().trim());
+    order.setStrategy(order.getStrategy().trim());
+    order.setExchange(order.getExchange().trim());
 
     // place the order with orderPlacingService
     OrderEntity journalOrder = orderPlacingService.placeOrder(journalName, order);

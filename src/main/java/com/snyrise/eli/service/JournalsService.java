@@ -28,7 +28,7 @@ public class JournalsService {
 
   public JournalEntity createJournal(Journal journal) {
     JournalEntity journalEntity = new JournalEntity();
-    journalEntity.setName(journal.getName());
+    journalEntity.setName(journal.getName().trim());
     journalEntity.setInitial_capital(journal.getInitial_capital());
     journalEntity.setBalance(journal.getInitial_capital());
     journalEntity.setPaperTradingJournal(journal.isPaperTradingJournal());
